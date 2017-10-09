@@ -14,5 +14,8 @@ liste:Hero[];
   ngOnInit() {
     this.hs.getAllHeroes().subscribe((heroes) => this.liste = heroes);
   }
-
+inspect(hero:Hero) {
+  console.log(hero);
+  hero.name = hero.name.substr(0,1).toUpperCase()+hero.name.substr(1);
+}
 }
